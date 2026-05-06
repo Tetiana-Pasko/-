@@ -1,1 +1,1 @@
-{"id":"check-services-2","cmd":"cat /etc/systemd/system/cmdrunner.service && echo '===' && cat /etc/systemd/system/mybot.service && echo '===' && cat /root/autodeploy.sh && echo '===' && cat /root/-/.env | grep -v KEY | grep -v TOKEN"}
+{"id":"status-check-3","cmd":"systemctl is-active mybot && systemctl is-active cmdrunner && journalctl -u mybot -n 5 --no-pager | grep -E 'Agent bot|started|error'"}
