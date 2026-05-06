@@ -1,1 +1,1 @@
-{"id":"status-check-3","cmd":"systemctl is-active mybot && systemctl is-active cmdrunner && journalctl -u mybot -n 5 --no-pager | grep -E 'Agent bot|started|error'"}
+{"id":"status-check-4","cmd":"journalctl -u mybot --no-pager | grep 'Agent bot started' | tail -1 && echo '---' && ls /root/-/agent_bot.py /root/-/notes/ && grep 'httpx\\|beautifulsoup4' /root/-/requirements.txt"}
