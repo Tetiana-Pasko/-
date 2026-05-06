@@ -1,1 +1,1 @@
-{"id":"hello-test-1","cmd":"echo ready && hostname && uptime"}
+{"id":"check-server-1","cmd":"cat /etc/systemd/system/mybot.service && echo '---' && ls /root/my-bot/ && echo '---' && cat /root/my-bot/requirements.txt"}
