@@ -1,1 +1,1 @@
-{"id":"check-server-1","cmd":"cat /etc/systemd/system/mybot.service && echo '---' && ls /root/my-bot/ && echo '---' && cat /root/my-bot/requirements.txt"}
+{"id":"upgrade-to-agent-1","cmd":"cd /root/- && git pull origin main && /root/-/venv/bin/pip install -q -r requirements.txt && sed -i 's|bot.py|agent_bot.py|g' /etc/systemd/system/mybot.service && systemctl daemon-reload && systemctl restart mybot && sleep 3 && journalctl -u mybot -n 30 --no-pager"}
